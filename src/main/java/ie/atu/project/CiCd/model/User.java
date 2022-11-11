@@ -8,8 +8,33 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Document(collection = "User")
 
 public class User {
+    private String name;
+    private String ppsn_no;
+    private int credit_score;
+    public User(String name,String ppsn_no,int credit_score) {
+        set_name(name);
+        set_ppsn(ppsn_no);
+        set_credit_score(credit_score);
+
+    }
+    public void set_credit_score(int credit_score) {
+        this.credit_score = credit_score;
+    }
+
+    public void set_ppsn(String ppsn_no) {
+        this.ppsn_no = ppsn_no;
+    }
+
+    public void set_name(String name) {
+        this.name = name;
+    }
+
+    public String get_name(){
+        return this.name;
+    }
+
 }
