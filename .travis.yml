@@ -22,6 +22,7 @@ before_install:
   - mvn clean
   - docker login --username "$DOCKER_USER"  --password "$DOCKER_PASS"
   - docker pull openjdk:8-jdk-alpine
+  - chmod +x mvnw
 
 # git strips the wrapper jar file so we have to force its download during the build
 install:
