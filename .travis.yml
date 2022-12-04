@@ -20,7 +20,7 @@ jdk:
 
 before_install:
   - mvn clean
-  - echo "$dckr_pat_SiqPIYT3oBr67ZRwwNXJxLQHFks" | docker login  -u "$salvaged" --password-stdin
+  - echo "$dckr_pat_SiqPIYT3oBr67ZRwwNXJxLQHFks" | docker login  -u "$DOCKER_USER" --password-stdin
   - docker pull openjdk:8-jdk-alpine
 
 # git strips the wrapper jar file so we have to force its download during the build
