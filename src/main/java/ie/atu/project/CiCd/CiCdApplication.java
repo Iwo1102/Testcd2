@@ -9,7 +9,7 @@ public class CiCdApplication {
 	public static void main(String[] args) {
 		System.out.println("hello world\n");
 		SpringApplication.run(CiCdApplication.class, args);
-		System.out.println("test\n");
+		System.out.println("test2\n");
 
 	}
 
